@@ -1,0 +1,24 @@
+﻿<div>
+    <h1>@Title</h1>
+    @ChildContent
+
+    <button @onclick="OnYes">Yes!</button>
+</div>
+<hr/>
+@message
+
+@code{
+
+    [Parameter]
+    public string Title { get; set; }
+
+    [Parameter]
+    public RenderFragment ChildContent { get; set; }
+
+    private string message = "";
+    private void OnYes()
+    {
+
+        message = "z콘솔에 써라";
+    }
+}
